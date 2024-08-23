@@ -65,9 +65,9 @@ test('Test Case 24: Download Invoice after purchase order', async () => {
      await checkoutPage.clickContinueButton();
      await page.waitForLoadState('domcontentloaded');
     //  await page.reload()
-    //  const loggedInUserLocator = await loginPage.assertLoggedinState(userData);
-    // await expect(loggedInUserLocator).toBeVisible();
-    // Click 'Continue' button
+     const loggedInUserLocator = await loginPage.assertLoggedinState(userData);
+    await expect(loggedInUserLocator).toBeVisible();
+
    
     // Click 'Cart' button
     await cartPage.navigateToCart();
